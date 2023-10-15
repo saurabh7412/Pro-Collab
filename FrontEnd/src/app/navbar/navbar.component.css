@@ -1,0 +1,47 @@
+
+
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    padding: 10px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+a:hover{
+    scale: 1.1;
+    transition: 400ms;
+    color: rgb(25, 5, 68);
+}
+
+
+/* Small screens (e.g., mobile) */
+@media screen and (max-width: 768px) {
+    /* Adjust logo size for small screens */
+    .navbar img {
+      height: 30px;
+      width: 90px;
+    }
+  }
+  
+  /* Medium screens (e.g., tablet) */
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    /* Adjust logo size for medium screens */
+    .navbar img {
+      height: 40px;
+      width: 120px;
+    }
+  }
+  
+  /* Large screens (e.g., desktop) */
+  @media screen and (min-width: 1025px) {
+    /* Adjust logo size for large screens */
+    .navbar img {
+      height: 50px;
+      width: 150px;
+    }
+  }

@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.custom-background {
+    background-color: #302f2e; /* Replace with your desired background color */
+  }
+
+.custom-theadbg {
+    color: #9e5a16;
+}
+.custom-user {
+    color: #ffab10;
+}

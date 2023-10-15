@@ -1,0 +1,82 @@
+<!-- <form (submit)="updateTask()">
+    <div class="form-group">
+      <label for="taskName">Task Name</label>
+      <input
+        type="text"
+        id="taskName"
+        name="taskName"
+        [(ngModel)]="newTask.taskName"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea
+        id="description"
+        name="description"
+        [(ngModel)]="newTask.description"
+      ></textarea>
+    </div>
+    <div class="form-group">
+      <label for="priority">Priority</label>
+      <select id="priority" name="priority" [(ngModel)]="newTask.priority">
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="status">Status</label>
+      <select id="status" name="status" [(ngModel)]="newTask.status">
+        <option value="to-do">To Do</option>
+        <option value="in-progress">In Progress</option>
+        <option value="completed">Completed</option>
+      </select>
+    </div>
+    <button type="submit">Update Task</button>
+  </form> -->
+
+
+
+  <form (submit)="updateTask()" class="p-6">
+    <div class="space-y-4">
+      <div class="form-group flex flex-col">
+        <label for="taskName" class="text-gray-600 align-middle">Task Name:</label>
+        <input
+          type="text"
+          id="taskName"
+          name="taskName"
+          [(ngModel)]="newTask.taskName"
+          required
+          class="input input-bordered"
+        />
+      </div>
+      <div class="form-group flex flex-col">
+        <label for="description" class="text-gray-600 align-middle">Description:</label>
+        <textarea
+          id="description"
+          name="description"
+          [(ngModel)]="newTask.description"
+          class="input input-bordered"
+        ></textarea>
+      </div>
+      <div class="form-group flex flex-col">
+        <label for="priority" class="text-gray-600 align-middle">Priority:</label>
+        <select id="priority" name="priority" [(ngModel)]="newTask.priority" class="input input-bordered">
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
+        </select>
+      </div>
+      <div class="form-group flex flex-col">
+        <label for="status" class="text-gray-600 align-middle">Status:</label>
+        <select id="status" name="status" [(ngModel)]="newTask.status" class="input input-bordered">
+          <option value="to-do">To Do</option>
+          <option value="in-progress">In Progress</option>
+          <option value="completed">Completed</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary w-full">Update Task</button>
+    </div>
+  </form>
+  

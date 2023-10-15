@@ -1,0 +1,117 @@
+<!-- <form (submit)="onSubmit()">
+  <div class="form-group">
+    <label for="taskName">Task Name</label>
+    <input
+      type="text"
+      id="taskName"
+      name="taskName"
+      [(ngModel)]="newTask.taskName"
+      required
+    />
+  </div>
+  <div class="form-group">
+    <label for="deadline">Deadline</label>
+    <input
+      type="date"
+      id="deadline"
+      name="deadline"
+      [(ngModel)]="newTask.deadline"
+      required
+    />
+  </div>
+  <div class="form-group">
+    <label for="description">Description</label>
+    <textarea
+      id="description"
+      name="description"
+      [(ngModel)]="newTask.description"
+    ></textarea>
+  </div>
+  <div class="form-group">
+    <label for="priority">Priority</label>
+    <select id="priority" name="priority" [(ngModel)]="newTask.priority">
+      <option value="low">Low</option>
+      <option value="medium">Medium</option>
+      <option value="high">High</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="status">Status</label>
+    <select id="status" name="status" [(ngModel)]="newTask.status">
+      <option value="to-do">To Do</option>
+      <option value="in-progress">In Progress</option>
+      <option value="completed">Completed</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="assignedTo">Assigned To</label>
+    <select id="assignedTo" name="assignedTo" [(ngModel)]="newTask.assignedTo">
+      <option *ngFor="let member of projectMembers" [value]="member.username">
+        {{ member.username }}
+      </option>
+    </select>
+  </div>
+  <button type="submit">Create Task</button>
+</form> -->
+
+
+<form (submit)="onSubmit()" class="p-6">
+  <div class="space-y-4">
+    <div class="form-group flex flex-col">
+      <label for="taskName" class="text-gray-600 align-middle">Task Name:</label>
+      <input
+        type="text"
+        id="taskName"
+        name="taskName"
+        [(ngModel)]="newTask.taskName"
+        required
+        class="input input-bordered"
+      />
+    </div>
+    <div class="form-group flex flex-col">
+      <label for="deadline" class="text-gray-600 align-middle">Deadline:</label>
+      <input
+        type="date"
+        id="deadline"
+        name="deadline"
+        [(ngModel)]="newTask.deadline"
+        required
+        class="input input-bordered"
+      />
+    </div>
+    <div class="form-group flex flex-col">
+      <label for="description" class="text-gray-600 align-middle">Description:</label>
+      <textarea
+        id="description"
+        name="description"
+        [(ngModel)]="newTask.description"
+        class="input input-bordered"
+      ></textarea>
+    </div>
+    <div class="form-group flex flex-col">
+      <label for="priority" class="text-gray-600 align-middle">Priority:</label>
+      <select id="priority" name="priority" [(ngModel)]="newTask.priority" class="input input-bordered">
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+      </select>
+    </div>
+    <div class="form-group flex flex-col">
+      <label for="status" class="text-gray-600 align-middle">Status:</label>
+      <select id="status" name="status" [(ngModel)]="newTask.status" class="input input-bordered">
+        <option value="to-do">To Do</option>
+        <option value="in-progress">In Progress</option>
+        <option value="completed">Completed</option>
+      </select>
+    </div>
+    <div class="form-group flex flex-col">
+      <label for="assignedTo" class="text-gray-600 align-middle">Assigned To:</label>
+      <select id="assignedTo" name="assignedTo" [(ngModel)]="newTask.assignedTo" class="input input-bordered">
+        <option *ngFor="let member of projectMembers" [value]="member.username">
+          {{ member.username }}
+        </option>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-primary w-full">Create Task</button>
+  </div>
+</form>

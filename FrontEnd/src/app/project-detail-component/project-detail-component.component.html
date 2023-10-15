@@ -1,0 +1,98 @@
+<!-- <div>
+  <div>
+    <a routerLink="addTask"><button>Add Task</button></a>
+    <a routerLink="addMember"><button>Add Member</button></a>
+  </div>
+  <div class="card">
+    <h2>{{ project?.projectName }}</h2>
+    <p>{{ project?.description }}</p>
+    <p><strong>Start Date:</strong> {{ project?.startDate | date }}</p>
+    <p><strong>End Date:</strong> {{ project?.endDate | date }}</p>
+    <p><strong>Project Lead:</strong> {{ project?.projectLead?.username }}</p>
+    <p><strong>Members:</strong></p>
+    <ul>
+      <li *ngFor="let member of project?.members">{{ member?.username }}</li>
+    </ul>
+
+    <p><strong>Tasks:</strong></p>
+
+    <table>
+        <thead>
+          <tr>
+            <th>Task Name</th>
+            <th>Description</th>
+            <th>Priority</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let el of project?.task">
+            <td>{{ el.taskName }}</td>
+            <td>{{ el.description }}</td>
+            <td>{{ el.priority }}</td>
+            <td>{{ el.status }}</td>
+            <td>
+              <a routerLink="editTask/{{el._id}}">
+                <button>Edit</button>
+              </a>
+                <button (click)="deleteTask(el._id)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    
+
+  </div>
+</div> -->
+
+
+<div class="p-6">
+  <div class="mb-4 space-x-10">
+    <a routerLink="addTask">
+      <button class="btn btn-primary">Add Task</button>
+    </a>
+    <a routerLink="addMember">
+      <button class="btn btn-primary">Add Member</button>
+    </a>
+  </div>
+  <div class="card shadow-lg p-4 custom-background">
+    <h2 class="text-2xl font-semibold mb-2">Project - {{ project?.projectName }}</h2>
+    <p class="text-white-600 mb-2">Description - {{ project?.description }}</p>
+    <p class="text-blue-600"><strong>Start Date:</strong> {{ project?.startDate | date }}</p>
+    <p class="text-red-600"><strong>End Date:</strong> {{ project?.endDate | date }}</p>
+    <p class="text-green-600"><strong>Project Lead:</strong> {{ project?.projectLead?.username }}</p>
+    <p class="text-orange-600"><strong>Members:</strong></p>
+    <ul class="text-white-600 list-disc ml-8">
+      <li *ngFor="let member of project?.members">{{ member?.username }}</li>
+    </ul>
+
+    <p class="text-white-600 mt-10 text-2xl font-semibold"><strong>Tasks:</strong></p>
+
+    <table class="table-auto w-full bg-gray-900">
+      <thead class="border-b custom-theadbg">
+        <tr>
+          <th class="px-4 py-2 custom-theadbg">Task Name</th>
+          <th class="px-4 py-2 custom-theadbg">Description</th>
+          <th class="px-4 py-2 custom-theadbg">Priority</th>
+          <th class="px-4 py-2 custom-theadbg">Status</th>
+          <th class="px-4 py-2 custom-theadbg">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let el of project?.task" class="border-b">
+          <td class="px-4 py-2 text-white">{{ el.taskName }}</td>
+          <td class="px-4 py-2 text-white">{{ el.description }}</td>
+          <td class="px-4 py-2 text-white">{{ el.priority }}</td>
+          <td class="px-4 py-2 text-white">{{ el.status }}</td>
+          <td class="px-4 py-2 space-x-2">
+            <a routerLink="editTask/{{el._id}}">
+              <button class="btn btn-primary">Edit</button>
+            </a>
+            <button class="btn btn-danger" (click)="deleteTask(el._id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

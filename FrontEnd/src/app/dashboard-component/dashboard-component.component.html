@@ -1,0 +1,78 @@
+<!-- <p>{{projects | json}}</p> -->
+
+
+<!-- <div>
+    <div *ngIf="tokenn">
+        <a routerLink="/projects/create">
+            <button class="btn btn-primary">Create new Project</button>
+        </a>
+    </div>
+
+    <div *ngIf="!tokenn">
+        <h1>
+            Login First to see the Dashboard...
+        </h1>
+
+    </div>
+
+    <div class="card" *ngFor="let project of projects">
+
+        <h2>{{ project.projectName }}</h2>
+        <p>{{ project.description }}</p>
+        <p><strong>Start Date:</strong> {{ project.startDate | date }}</p>
+        <p><strong>End Date:</strong> {{ project.endDate | date }}</p>
+        <p><strong>Project Lead:</strong> {{ project.projectLead.username}}</p>
+        <p><strong>Members:</strong> {{ project.members.length }}</p>
+
+        <div>
+            <a routerLink="/projects/{{project._id}}">Go To Project</a>
+            <a (click)="deleteProject(project._id)">Delete Project</a>
+        </div>
+      </div>
+      
+</div> -->
+
+
+<div class="p-6">
+    <!-- <div *ngIf="tokenn" class="mb-4">
+      <a routerLink="/projects/create">
+        <button class="btn btn-primary">Create new Project</button>
+      </a>
+
+      <h1 *ngIf="username">Current User - {{username}}</h1>
+
+    </div> -->
+
+    <div *ngIf="tokenn" class="mb-4 flex justify-between items-center">
+        <a routerLink="/projects/create">
+          <button class="btn btn-primary">Create new Project</button>
+        </a>
+      
+        <h1 *ngIf="username" class="text-lg">Current User - <span class="text-white-200 custom-user text-xl">{{ username }}</span></h1>
+      </div>
+      
+  
+    <div *ngIf="!tokenn" class="mb-4">
+      <h1>Login First to see the Dashboard...</h1>
+    </div>
+  
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div class="card custom-background p-6" *ngFor="let project of projects">
+        <h2 class="text-xl font-semibold">Project - {{ project.projectName }}</h2>
+        <p class="text-white-600 mb-2">Overview - {{ project.description }}</p>
+        <p class="text-blue-600"><strong>Start Date:</strong> {{ project.startDate | date }}</p>
+        <p class="text-red-600"><strong>End Date:</strong> {{ project.endDate | date }}</p>
+        <p class="text-green-600 text-lg font-bold"><strong>Project Lead:</strong> {{ project.projectLead.username }}</p>
+        <p class="text-orange-600"><strong>Members:</strong> {{ project.members.length }}</p>
+  
+        <div class="mt-4">
+          <a routerLink="/projects/{{ project._id }}" class="btn btn-primary">Go To Project</a>
+          <a (click)="deleteProject(project._id)" class="btn btn-danger ml-4">Delete Project</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
+  

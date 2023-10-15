@@ -1,0 +1,35 @@
+
+<!-- <div>
+    <h1>Add Members</h1>
+
+    <div>
+
+        <form (submit)="addMember()">
+            <div class="form-group">
+              <label for="project">Select a Project</label>
+              <select id="project" name="project" [(ngModel)]="selectedUsername">
+                <option *ngFor="let user of allUsers">{{ user.username }}</option>
+              </select>
+            </div>
+            <button type="submit">Add Member</button>
+          </form>
+          
+
+    </div>
+</div> -->
+
+<div class="p-6">
+  <h1 class="text-2xl font-semibold mb-4">Add Members</h1>
+
+  <div>
+    <form (submit)="addMember()" class="space-y-4">
+      <div class="flex flex-col">
+        <label for="project" class="text-gray-400">Select a Project</label>
+        <select id="project" name="project" [(ngModel)]="selectedUsername" class="input input-bordered">
+          <option *ngFor="let user of allUsers">{{ user.username }}</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary w-full">Add Member</button>
+    </form>
+  </div>
+</div>
