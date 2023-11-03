@@ -4,6 +4,15 @@
 
 Pro-Collab is a project and task management application created using prompt engineering and generative AI. It allows users to sign in or log in, create projects, add members to those projects, and assign tasks to the added members. User can perform all CRUD operations.
 
+## Dashboard
+![Screenshot 2023-11-03 165433](https://github.com/saurabh7412/Pro-Collab/assets/121215502/78a0db5d-238a-4e16-9cc7-fc5300188ca0)
+
+
+
+## Project Info Page
+![Screenshot 2023-11-03 165542](https://github.com/saurabh7412/Pro-Collab/assets/121215502/5ec8c31b-fa31-4ae4-b25e-e90708a4c114)
+
+
 ## Tech Stack
 
 - Frontend: Angular, Daisy UI
@@ -18,7 +27,7 @@ Pro-Collab is a project and task management application created using prompt eng
 
 ### Installation
 
-1. Clone the repository: `git clone https://github.com/yourusername/pro-collab.git`
+1. Clone the repository: `git clone https://github.com/saurabh7412/Pro-Collab.git`
 2. Navigate to the project directory: `cd pro-collab`
 
 ### Running the Application
